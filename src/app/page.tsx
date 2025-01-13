@@ -127,6 +127,53 @@ const NewSeriesSection = () => {
   );
 };
 
+const ContactSection = () => {
+  return (
+    <section className="bg-gradient-to-b from-accent-cream to-accent-orange py-16 text-center">
+      <div className="container mx-auto px-4 max-w-2xl">
+        <h3 className="text-2xl text-primary-dark mb-6">
+          לפרטים נוספים ולהרשמה
+        </h3>
+        <p className="text-3xl md:text-4xl font-bold text-primary mb-2">
+          מאיר אבינר
+        </p>
+        <a 
+          href="tel:052-6518168" 
+          className="text-3xl md:text-4xl font-bold text-primary hover:text-primary-dark transition-colors block mb-8"
+        >
+          052-6518168
+        </a>
+        <p className="text-sm text-primary-dark/70 max-w-lg mx-auto">
+          הסדנה אינה מחליפה טיפול נפשי, וחשוב לציין כי מאיר אבינר אינו מטפל רגשי בהכשרתו.
+        </p>
+      </div>
+    </section>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="bg-primary-dark py-8 text-center text-white">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-center space-x-4 mb-4">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <Image src="/facebook-icon.png" alt="Facebook" width={24} height={24} />
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <Image src="/instagram-icon.png" alt="Instagram" width={24} height={24} />
+          </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+            <Image src="/twitter-icon.png" alt="Twitter" width={24} height={24} />
+          </a>
+        </div>
+        <p className="text-sm">
+          © 2023 זאב אבינר. כל הזכויות שמורות.
+        </p>
+      </div>
+    </footer>
+  );
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)] overflow-x-hidden">
@@ -188,27 +235,10 @@ export default function Home() {
       <ActivitiesList />
       <VideoSection />
       <NewSeriesSection />
+      <ContactSection />
 
       {/* פוטר משודרג */}
-      <footer className="bg-gradient-to-b from-accent-cream to-accent-orange py-16 text-center"> {/* Changed py-8 to py-16 */}
-        <div className="container mx-auto px-4 max-w-2xl">
-          <h3 className="text-2xl text-primary-dark mb-6">
-            לפרטים נוספים ולהרשמה
-          </h3>
-          <p className="text-3xl md:text-4xl font-bold text-primary mb-2">
-            מאיר אבינר
-          </p>
-          <a 
-            href="tel:052-6518168" 
-            className="text-3xl md:text-4xl font-bold text-primary hover:text-primary-dark transition-colors block mb-8"
-          >
-            052-6518168
-          </a>
-          <p className="text-sm text-primary-dark/70 max-w-lg mx-auto">
-            הסדנה אינה מחליפה טיפול נפשי, וחשוב לציין כי מאיר אבינר אינו מטפל רגשי בהכשרתו.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
