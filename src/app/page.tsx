@@ -102,6 +102,80 @@ const VideoSection = () => {
   );
 };
 
+const SeriesDetails = () => {
+  return (
+    <section className="bg-accent-cream/30 py-16">
+      <div className="container mx-auto px-4">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-dark"
+        >
+          סדרת ארבעה מפגשים
+        </motion.h2>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl"
+        >
+          <Image
+            src="/series-image.jpg"
+            alt="סדרת ארבעה מפגשים"
+            width={896}
+            height={600}
+            priority
+            className="w-full"
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+const NewSeriesSection = () => {
+  return (
+    <section className="bg-accent-cream/30 py-16">
+      <div className="container mx-auto px-4">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-4 text-primary-dark"
+        >
+          סדרה של ארבעה מפגשים
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg text-center text-primary-dark/80 max-w-md mx-auto mb-8"
+        >
+          כל מפגש שלוש שעות
+          <br />
+          650 ש"ח
+        </motion.p>
+        <div className="flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="rounded-full overflow-hidden w-64 h-64 relative shadow-xl"
+          >
+            <Image
+              src="/image.jpeg"
+              alt="סדרת מפגשים"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)] overflow-x-hidden">
@@ -162,7 +236,9 @@ export default function Home() {
       {/* סקשנים נוספים */}
       <ActivitiesList />
       <VideoSection />
-      
+
+      <NewSeriesSection />
+
       <PoemSection />
 
       {/* Final section with background and image */}
