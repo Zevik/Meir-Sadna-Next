@@ -196,40 +196,34 @@ const AboutSection = () => {
 };
 
 const Footer = () => {
-  const socialLinks = [
-    {
-      name: "פייסבוק",
-      url: "https://www.facebook.com/meir.hatov",
-      icon: "/facebook-icon.png"
-    },
-    {
-      name: "אינסטגרם",
-      url: "https://www.instagram.com/meiraviner/",
-      icon: "/instagram-icon.png"
-    },
-    {
-      name: "יוטיוב",
-      url: "https://www.youtube.com/@hila454",
-      icon: "/youtube-icon.png"
-    }
-  ];
-
   return (
     <footer className="bg-primary-dark py-8 text-center text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
-          {socialLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-accent-cream transition-colors"
-            >
-              <Image src={link.icon} alt={link.name} width={24} height={24} />
-              <span className="text-lg">{link.name}</span>
-            </a>
-          ))}
+          <a 
+            href="https://www.facebook.com/meir.hatov" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-accent-cream transition-colors"
+          >
+            פייסבוק
+          </a>
+          <a 
+            href="https://www.instagram.com/meiraviner/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-accent-cream transition-colors"
+          >
+            אינסטגרם
+          </a>
+          <a 
+            href="https://www.youtube.com/@hila454" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-accent-cream transition-colors"
+          >
+            יוטיוב
+          </a>
         </div>
         <p className="text-sm mt-4">
           כל הזכויות שמורות לזאב אבינר | וואטסאפ: 054-6609385
