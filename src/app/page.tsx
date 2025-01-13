@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from "framer-motion";
-import PoemSection from "@/components/poem-section";
 import Image from "next/image";
 
 // קומפוננטה להנפשת טקסט מילה אחרי מילה
@@ -206,8 +205,6 @@ export default function Home() {
       <VideoSection />
 
       <NewSeriesSection />
-
-      <PoemSection />
 
       {/* Final section with background and image */}
       <section className="relative bg-gradient-to-br from-accent-cream/80 to-accent-orange/20 py-20">
