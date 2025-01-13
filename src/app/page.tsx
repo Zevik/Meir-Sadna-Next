@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"; // Removed useAnimate
 import DonationCards from "@/components/donation-cards";
-import VideoSection from "@/components/video-section";
 import PoemSection from "@/components/poem-section";
 import Image from "next/image";
 
@@ -31,6 +30,43 @@ const AnimatedText = () => {
         ))}
       </p>
     </div>
+  );
+};
+
+const ActivitiesList = () => {
+  const activities = [
+    "תקשורת בלתי אמצעית, ג'בריש ואילתור",
+    "שירת תפילה",
+    "תרגילי נשימה",
+    "מדיטציה ודמיון מודרך",
+    "לייב טראנס לשחרור הורמונלי במוח",
+    "פריקת מתחים עם תנועה, קול וצחוק",
+    "מעגלי שיתוף ושיח"
+  ];
+
+  return (
+    <section className="bg-accent-cream/30 pt-4 pb-12">
+      <div className="container mx-auto px-4">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-4 text-primary-dark"
+        >
+          פעילויות במפגשים
+        </motion.h2>
+        <motion.ul 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg text-center text-primary-dark/80 max-w-3xl mx-auto list-disc list-inside"
+        >
+          {activities.map((activity, index) => (
+            <li key={index} className="mb-2">{activity}</li>
+          ))}
+        </motion.ul>
+      </div>
+    </section>
   );
 };
 
@@ -92,7 +128,7 @@ export default function Home() {
       </main>
 
       {/* סקשנים נוספים */}
-      <VideoSection />
+      <ActivitiesList />
       
       {/* סקשן חדש עם כותרת וטקסט */}
       <section className="bg-accent-cream/30 pt-4 pb-12">
