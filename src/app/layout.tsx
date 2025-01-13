@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "מאיר את הלב",
-  description: "פעילות בבתי הכלא - מאיר את הלב",
+  title: "מים עמוקים",
+  description: "סדנה לשחרור עמוק עם מאיר אבינר",
 };
 
 export default function RootLayout({

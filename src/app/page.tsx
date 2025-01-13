@@ -113,16 +113,15 @@ const NewSeriesSection = () => {
         >
           סדרה של ארבעה מפגשים
         </motion.h2>
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg text-center text-primary-dark/80 max-w-md mx-auto mb-8"
+          className="text-3xl md:text-4xl font-bold text-center text-primary-dark"
         >
-          כל מפגש שלוש שעות
-          <br />
-          650 ש&quot;ח
-        </motion.p>
+          <p className="mb-2">כל מפגש שלוש שעות</p>
+          <p>650 ש&quot;ח</p>
+        </motion.div>
       </div>
     </section>
   );
