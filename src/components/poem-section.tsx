@@ -1,11 +1,10 @@
 'use client'
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion"; // removed useInView
 import { useRef } from "react";
 
 export default function PoemSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref = useRef(null); // removed isInView
 
   return (
     <section className="pt-8 pb-20 md:py-32 bg-gradient-to-br from-accent-cream via-accent-cream/30 to-accent-orange/10"> {/* Changed from pt-12 to pt-8 */}
