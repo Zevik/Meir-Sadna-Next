@@ -70,6 +70,31 @@ const ActivitiesList = () => {
   );
 };
 
+const VideoSection = () => {
+  return (
+    <section className="bg-accent-cream/30 py-16">
+      <div className="container mx-auto px-4">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl"
+        >
+          <video
+            className="w-full aspect-video object-cover"
+            controls
+            playsInline
+            poster="/meir.jpeg"
+          >
+            <source src="/videoplayback.mp4" type="video/mp4" />
+            הדפדפן שלך לא תומך בתג הווידאו.
+          </video>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)] overflow-x-hidden">
@@ -129,6 +154,7 @@ export default function Home() {
 
       {/* סקשנים נוספים */}
       <ActivitiesList />
+      <VideoSection />
       
       {/* סקשן חדש עם כותרת וטקסט */}
       <section className="bg-accent-cream/30 pt-4 pb-12">
