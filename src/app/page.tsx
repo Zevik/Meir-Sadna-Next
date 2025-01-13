@@ -45,26 +45,35 @@ const ActivitiesList = () => {
   ];
 
   return (
-    <section className="bg-accent-cream/30 pt-4 pb-12">
+    <section className="bg-accent-cream/30 pt-16 pb-12"> {/* Changed from pt-4 to pt-16 */}
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-4 text-primary-dark"
+          className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-dark" /* Changed mb-4 to mb-12 */
         >
           פעילויות במפגשים
         </motion.h2>
-        <motion.ul 
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg text-center text-primary-dark/80 max-w-3xl mx-auto list-disc list-inside"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto"
         >
           {activities.map((activity, index) => (
-            <li key={index} className="mb-2">{activity}</li>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center text-primary-dark/90 
+                         shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              {activity}
+            </motion.div>
           ))}
-        </motion.ul>
+        </motion.div>
       </div>
     </section>
   );
