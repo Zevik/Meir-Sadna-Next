@@ -163,30 +163,6 @@ export default function Home() {
       <ActivitiesList />
       <VideoSection />
       
-      {/* סקשן חדש עם כותרת וטקסט */}
-      <section className="bg-accent-cream/30 pt-4 pb-12">
-        <div className="container mx-auto px-4">
-          <motion.h2 
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl font-bold text-center mb-4 text-primary-dark"
-          >
-            אבל מאיר! איך אפשר להצטרף לטוב הזה?
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-center text-primary-dark/80 max-w-3xl mx-auto"
-          >
-            תנו אור לנשמות בכלא – תמכו בכמה נשמות שתרצו להאיר
-            <br />
-            כל פעם שאני מגיע לבתי הכלא, אנחנו שרים, מתפללים ומביאים אור. כל מפגש הוא מסע משותף פנימה, להאיר את הלב. ואתם יכולים לבחור להיות חלק ממשי במסע הזה, לתת אור לכמה נשמות שתרצו.
-          </motion.p>
-        </div>
-      </section>
-
       <PoemSection />
 
       {/* Final section with background and image */}
