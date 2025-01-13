@@ -123,21 +123,6 @@ const NewSeriesSection = () => {
           <br />
           650 ש&quot;ח
         </motion.p>
-        <div className="flex justify-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="rounded-full overflow-hidden w-64 h-64 relative shadow-xl"
-          >
-            <Image
-              src="/image.jpeg"
-              alt="סדרת מפגשים"
-              fill
-              className="object-cover"
-            />
-          </motion.div>
-        </div>
       </div>
     </section>
   );
@@ -203,23 +188,7 @@ export default function Home() {
       {/* סקשנים נוספים */}
       <ActivitiesList />
       <VideoSection />
-
       <NewSeriesSection />
-
-      {/* Final section with background and image */}
-      <section className="relative bg-gradient-to-br from-accent-cream/80 to-accent-orange/20 py-20">
-        <div className="container mx-auto px-2 sm:px-4 max-w-4xl"> {/* Changed to max-w-4xl to match poem section */}
-          <Image
-            src="/meir.jpeg"
-            alt="מאיר את הלב"
-            width={896}    // 56rem * 16px = 896px
-            height={600}
-            priority
-            loading="eager"
-            className="rounded-3xl shadow-lg mx-auto w-full"
-          />
-        </div>
-      </section>
 
       {/* פוטר משודרג */}
       <footer className="bg-gradient-to-b from-accent-cream to-accent-orange py-8 text-center">
@@ -235,7 +204,6 @@ export default function Home() {
           </a>
         </div>
       </footer>
-
     </div>
   );
 }
