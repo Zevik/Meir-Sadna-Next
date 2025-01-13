@@ -191,17 +191,23 @@ export default function Home() {
       <NewSeriesSection />
 
       {/* פוטר משודרג */}
-      <footer className="bg-gradient-to-b from-accent-cream to-accent-orange py-8 text-center">
+      <footer className="bg-gradient-to-b from-accent-cream to-accent-orange py-16 text-center"> {/* Changed py-8 to py-16 */}
         <div className="container mx-auto px-4 max-w-2xl">
+          <h3 className="text-2xl text-primary-dark mb-6">
+            לפרטים נוספים ולהרשמה
+          </h3>
           <p className="text-3xl md:text-4xl font-bold text-primary mb-2">
             מאיר אבינר
           </p>
           <a 
             href="tel:052-6518168" 
-            className="text-3xl md:text-4xl font-bold text-primary hover:text-primary-dark transition-colors"
+            className="text-3xl md:text-4xl font-bold text-primary hover:text-primary-dark transition-colors block mb-8"
           >
             052-6518168
           </a>
+          <p className="text-sm text-primary-dark/70 max-w-lg mx-auto">
+            הסדנה אינה מחליפה טיפול נפשי, וחשוב לציין כי מאיר אבינר אינו מטפל רגשי בהכשרתו.
+          </p>
         </div>
       </footer>
     </div>
