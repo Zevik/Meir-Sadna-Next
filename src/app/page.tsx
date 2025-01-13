@@ -158,12 +158,15 @@ const Footer = () => {
         <div className="flex justify-center space-x-4 mb-4">
           <a href="https://www.facebook.com/meir.hatov" target="_blank" rel="noopener noreferrer">
             <Image src="/facebook-icon.png" alt="Facebook" width={24} height={24} />
+            <span className="ml-2">Facebook</span>
           </a>
           <a href="https://www.instagram.com/meiraviner/" target="_blank" rel="noopener noreferrer">
             <Image src="/instagram-icon.png" alt="Instagram" width={24} height={24} />
+            <span className="ml-2">Instagram</span>
           </a>
           <a href="https://www.youtube.com/@hila454" target="_blank" rel="noopener noreferrer">
             <Image src="/youtube-icon.png" alt="YouTube" width={24} height={24} />
+            <span className="ml-2">YouTube</span>
           </a>
         </div>
         <p className="text-sm">
