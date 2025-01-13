@@ -5,7 +5,7 @@ import Image from "next/image";
 
 // קומפוננטה להנפשת טקסט מילה אחרי מילה
 const AnimatedText = () => {
-  const text = "זה הזמן לשחרר את עצמך אפילו יותר, ולהרגיש את זרם החיים שפועם לך בגוף בסדרת המפגשים עם מאיר אבינר. אני מזמין אותך לגילוי עצמי דרך הניגון: נרגיש מקומות עמוקים בנפש, נתעורר בלייב טראנס, נכיל ונלעס את ההפכים שבתוכנו, ננפץ פרות קדושות, נתפלל יחד, נבטא ונשחרר, נצחק עד שיכאב.";
+  const text = "זה הזמן לשחרר את עצמך אפילו יותר, ולהרגיש את זרם החיים שפועם לך בגוף בסדרת המפגשים עם מאיר אבינר. אני מזמין אותך לגילוי עצמי דרך הניגון; נרגיש מקומות עמוקים בנפש, נתעורר בלייב טראנס, נכיל ונלעס את ההפכים שבתוכנו, ננפץ פרות קדושות, נתפלל יחד, נבטא ונשחרר, נצחק עד שיכאב.";
   const words = text.split(" ");
 
   return (
@@ -151,6 +151,46 @@ const ContactSection = () => {
   );
 };
 
+const AboutSection = () => {
+  const paragraphs = [
+    "מאיר אבינר בן 42, אבא לילדה מתוקה, וגר בברקאי, ליד פרדס חנה",
+    "למדתי טיפול בריברסינג, תרפיה בקול ותנועה, משחק ואימפרוויזציה.\nומגיל שלושים אני מעביר סדנאות והופעות של מוסיקה, פנימיות הנפש, נשימה, אלתור וצחוק.",
+    "לפני כשנתיים יצרתי את פרוייקט \"מאיר את הלב\", בו אני מעביר באופן קבוע פעילויות בבתי סוהר.\nהמפגשים בבתי הסוהר מביאים אור וריפוי לנפש של האסירים, דרך מוזיקה פסיכדלית שאני מנגן, הנחיה ושירת עומק, תפילה, מדיטציה, וצחוק.",
+    "בהופעות ובסדנאות אני אוהב לגעת במקומות העמוקים של הנפש, עם המוזיקה, האלתור והשירה. לתת להם ביטוי אמיתי, ולשחרר אותם לחופשי.",
+    "אני מאמין בהתמרה של כאב - לניגון, תפילה, וביטוי חופשי. רגש שמורגש ומתבטא במלואו, מתפתח ומשתחרר."
+  ];
+
+  return (
+    <section className="bg-gradient-to-br from-accent-cream/50 to-accent-orange/20 py-20">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary-dark"
+        >
+          מי אני?
+        </motion.h2>
+        <div className="space-y-8">
+          {paragraphs.map((paragraph, index) => (
+            <motion.p
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="text-xl leading-relaxed text-primary-dark/90 text-right"
+            >
+              {paragraph.split('\n').map((line, i) => (
+                <span key={i} className="block mb-2">{line}</span>
+              ))}
+            </motion.p>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Footer = () => {
   const socialLinks = [
     {
@@ -257,7 +297,7 @@ export default function Home() {
       <VideoSection />
       <NewSeriesSection />
       <ContactSection />
-
+      <AboutSection />
       {/* פוטר משודרג */}
       <Footer />
     </div>
