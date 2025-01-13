@@ -156,14 +156,14 @@ const Footer = () => {
     <footer className="bg-primary-dark py-8 text-center text-white">
       <div className="container mx-auto px-4">
         <div className="flex justify-center space-x-4 mb-4">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/meir.hatov" target="_blank" rel="noopener noreferrer">
             <Image src="/facebook-icon.png" alt="Facebook" width={24} height={24} />
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/meiraviner/" target="_blank" rel="noopener noreferrer">
             <Image src="/instagram-icon.png" alt="Instagram" width={24} height={24} />
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-            <Image src="/twitter-icon.png" alt="Twitter" width={24} height={24} />
+          <a href="https://www.youtube.com/@hila454" target="_blank" rel="noopener noreferrer">
+            <Image src="/youtube-icon.png" alt="YouTube" width={24} height={24} />
           </a>
         </div>
         <p className="text-sm">
