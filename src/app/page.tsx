@@ -93,7 +93,6 @@ const VideoSection = () => {
             className="w-full aspect-video object-cover"
             controls
             playsInline
-            poster="/meir.jpeg"
           >
             <source src="/videoplayback.mp4" type="video/mp4" />
             הדפדפן שלך לא תומך בתג הווידאו.
@@ -189,7 +188,6 @@ export default function Home() {
         </div>
       </section>
 
-      <DonationCards />
       <PoemSection />
 
       {/* Final section with background and image */}
