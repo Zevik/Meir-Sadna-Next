@@ -76,10 +76,14 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-6xl md:text-8xl font-bold text-accent-cream mb-4
-                           [text-shadow:_2px_2px_10px_rgb(195_14_89_/_40%)]">
-                מאיר את הלב
-              </h1>
+              <Image
+                src="/title.png"
+                alt="מאיר את הלב"
+                width={600}
+                height={200}
+                priority
+                className="mx-auto"
+              />
             </motion.div>
             
             <AnimatedText />
