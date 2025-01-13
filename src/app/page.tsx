@@ -5,32 +5,35 @@ import Image from "next/image";
 
 // קומפוננטה להנפשת טקסט מילה אחרי מילה
 const AnimatedText = () => {
-  const text = `זה הזמן לשחרר את עצמך אפילו יותר, ולהרגיש את זרם החיים שפועם לך בגוף.
-  
-בסדרת המפגשים עם מאיר אבינר, אני מזמין אותך לגילוי עצמי דרך הניגון;
-
-נרגיש מקומות עמוקים בנפש, נתעורר בלייב טראנס, נכיל ונלעס את ההפכים שבתוכנו, ננפץ פרות קדושות, נתפלל יחד, נבטא ונשחרר, נצחק עד שיכאב.`;
-  const words = text.split(" ");
+  const lines = [
+    "זה הזמן לשחרר את עצמך אפילו יותר, ולהרגיש את זרם החיים שפועם לך בגוף.",
+    "בסדרת המפגשים עם מאיר אבינר, אני מזמין אותך לגילוי עצמי דרך הניגון;",
+    "נרגיש מקומות עמוקים בנפש, נתעורר בלייב טראנס, נכיל ונלעס את ההפכים שבתוכנו, ננפץ פרות קדושות, נתפלל יחד, נבטא ונשחרר, נצחק עד שיכאב."
+  ];
 
   return (
     <div className="max-w-5xl mx-auto">
-      <p className="text-3xl md:text-4xl text-white leading-relaxed text-center font-light">
-        {words.map((word, i) => (
-          <motion.span
-            key={i}
-            className="inline-block mx-1"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.3,
-              delay: i * 0.2,
-              ease: "easeOut"
-            }}
-          >
-            {word}
-          </motion.span>
+      <div className="text-3xl md:text-4xl text-white leading-relaxed text-center font-light space-y-8">
+        {lines.map((line, i) => (
+          <p key={i}>
+            {line.split(" ").map((word, j) => (
+              <motion.span
+                key={j}
+                className="inline-block mx-1"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.3,
+                  delay: (i * line.split(" ").length + j) * 0.1,
+                  ease: "easeOut"
+                }}
+              >
+                {word}
+              </motion.span>
+            ))}
+          </p>
         ))}
-      </p>
+      </div>
     </div>
   );
 };
